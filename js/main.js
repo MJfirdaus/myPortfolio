@@ -29,13 +29,12 @@ function scrollActive() {
     const scrollY = window.pageYOffset
     
     sections.forEach(current => {
-        const sectionHeight = current.pageYOffsetHeight
+        const sectionHeight = current.offsetHeight
         const sectionTop = current.offsetTop - 50;
         sectionId = current.getAttribute('id')
 
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('nav__menu a[href*=' + sectionId +']').classList.add('active')
-
+            document.querySelector('.nav__menu a[href*=' + sectionId +']').classList.add('active')
         }else{
             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')
         }
@@ -52,7 +51,7 @@ const sr = ScrollReveal({
 //scroll
 sr.reveal('.home__title',{})
 sr.reveal('.home__scroll', {delay:200})
-sr.reveal('.home__img', {origin: 'right', delay: 4000})
+sr.reveal('.home__img', {origin: 'right', delay: 2000})
 
 //scroll about
 sr.reveal('.about__img', {delay:500})

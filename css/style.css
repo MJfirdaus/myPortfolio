@@ -248,7 +248,7 @@ img{
 }
 .skills__subtitle{
     color: var(--first-color);
-    margin-bottom: var(--mb-3)
+    margin-bottom: var(--mb-3);
 }
 .skills__name {
     display: inline-block;
@@ -266,8 +266,10 @@ img{
 }
 .skills__img img{
     border-radius: .5rem;
-    
+    width: 300px;
+    margin-left: 100px;
 }
+
 /*portofolio*/
 .portofolio{
     background-color: var(--white-color);
